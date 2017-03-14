@@ -1,0 +1,443 @@
+<!DOCTYPE  >
+<html ng-app="myApp">
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Optional theme -->
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet">
+                <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+                <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+                <meta content="width=device-width, initial-scale=1" name="viewport"/>
+                <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+                <!-- END META SECTION -->
+                <!-- CSS INCLUDE -->
+                <link href="templete/css/theme-blue.css" id="theme" rel="stylesheet" type="text/css"/>
+                <!-- EOF CSS INCLUDE -->
+                <title>
+                    Diabetes Care
+                </title>
+            </link>
+        </link>
+    </head>
+    <body>
+        <div class="page-container" ng-controller="AppCtrl2">
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="index.html">
+                            Diabetes Care
+                        </a>
+                        <a class="x-navigation-control" href="#">
+                        </a>
+                    </li>
+                    <li class="xn-profile">
+                        <a class="profile-mini" href="#">
+                            <img alt="John Doe" src="image/user-icon.png"/>
+                        </a>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img alt="John Doe" src="image/user-icon.png"/>
+                            </div>
+                            <div class="profile-data">
+                                <div class="profile-data-name">
+                                    Anchaporn
+                                </div>
+                                <div class="profile-data-title">
+                                    Admin
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="xn-title">
+                        Navigation
+                    </li>
+                    <li class="">
+                        <a href="index.html">
+                            <span class="fa fa-user">
+                            </span>
+                            <span class="xn-text">
+                                Show Member
+                            </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="member.html">
+                            <span class="fa fa-plus">
+                            </span>
+                            <span class="xn-text">
+                                Add member
+                            </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="setting.html">
+                            <span class="fa fa-cog">
+                            </span>
+                            <span class="xn-text">
+                                Setting
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            <!-- PAGE CONTENT -->
+            <div class="page-content" ng-view="">
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- SIGN OUT -->
+                    <li class="xn-icon-button pull-right">
+                        <a class="mb-control" data-box="#mb-signout" href="#">
+                            <span class="fa fa-sign-out">
+                            </span>
+                        </a>
+                    </li>
+                    <!-- END SIGN OUT -->
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                </ul>
+                <!-- END BREADCRUMB -->
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap col-md-6 col-sm-6 col-xs-12">
+                    <h2>
+                        Diabetes Members
+                    </h2>
+                    <form action="javascript:alert('Form #validate submited');" class="form-horizontal" id="validate" role="form">
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">
+                                Username
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control has-feedback-left" id="username" ng-model="contact.username" placeholder="username" required="required" type="text">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">
+                                Password
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control has-feedback-left" id="password" ng-model="contact.password" placeholder="password" required="required" type="password">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">
+                                ConfirmPassword
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control has-feedback-left" id="confirm" ng-model="contact.confirm" placeholder="confirm password" required="required" type="password">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name" >
+                                Firstname
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control col-md-7 col-xs-12" id="firstname" name="firstname" ng-model="contact.firstname" required="required" type="text">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                Lastname
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control col-md-7 col-xs-12" id="lastname" name="lastname" ng-model="contact.lastname" required="required" type="text">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="genders">
+                                Gender
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <p>
+                                    <input class="flat iradio_flat-green" name="genders" ng-model="contact.gender" type="radio" value="1"/>
+                                    Male
+                                    <input class="flat iradio_flat-green" name="gender" ng-model="contact.gender" type="radio" value="2"/>
+                                    Female
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone">
+                                Email
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control has-feedback-left" id="email" ng-model="contact.email" placeholder="example@email.com" required="required" type="email">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                Age
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control col-md-7 col-xs-12" id="lastname" name="lastname" ng-model="contact.age" required="required" type="number">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">
+                                Weight
+                            </label>
+                            <div class="col-md-2 col-sm-3 col-xs-3">
+                                <input class="form-control col-md-2 col-xs-6" id="lastname" name="lastname" ng-model="contact.weight" required="required" type="number">
+                                </input>
+                            </div>
+                            <label class="control-label col-md-1 col-sm-1 col-xs-1" for="height">
+                                Height
+                            </label>
+                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                <input class="form-control col-md-2 col-xs-6" id="lastname" name="lastname" ng-model="contact.height" required="required" type="number">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                Type
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="form-control" ng-model="contact.type">
+                                    <option value="">
+                                        Select Type
+                                    </option>
+                                    <option value="1">
+                                        insulin
+                                    </option>
+                                    <option value="2">
+                                        Not insulin
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                Complication
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="form-control" ng-model="contact.complication">
+                                    <option value="">
+                                        Select Complication
+                                    </option>
+                                    <option value="1">
+                                        retinopathy
+                                    </option>
+                                    <option value="2">
+                                        nephropathy
+                                    </option>
+                                    <option value="3">
+                                        neuropathy
+                                    </option>
+                                    <option value="4">
+                                        Diabetic ulcer
+                                    </option>
+                                    <option value="5">
+                                        Diabetic foot
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                Disease
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="form-control" ng-model="contact.disease">
+                                    <option value="">
+                                        Select Disease
+                                    </option>
+                                    <option value="1">
+                                        Cardiovascular Disease)
+                                    </option>
+                                    <option value="2">
+                                        High blood pressure
+                                    </option>
+                                    <option value="3">
+                                        kidney disease
+                                    </option>
+                                    <option value="4">
+                                        peripheral neuropathy Disease
+                                    </option>
+                                    <option value="5">
+                                        Eye disease
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="genders">
+                                Drug allergy
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <p>
+                                    <input class="flat iradio_flat-green" name="Drugs" ng-model="contact.dragallergy" type="radio" value="1">
+                                        Yes
+                                        <input class="flat iradio_flat-green" name="Drug" ng-model="contact.dragallergy" type="radio" value="2">
+                                            No
+                                        </input>
+                                    </input>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone">
+                                Email Doctor
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control has-feedback-left" id="email.doctor"  name="emaildoctor" ng-model="contact.emaildoctor" placeholder="example@email.com" required="required" type="email">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="ln_solid">
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                <button class="btn btn-primary pull-right" onclick="parent.location='index.html'" type="button">
+                                    Cancel
+                                </button>
+                                <!--<button class="btn btn-warning pull-right" ng-click="update()" type="submit">
+                                    Update
+                                </button>
+                                -->
+                                <button class="btn btn-success pull-right" ng-click="addContact()" type="submit">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END PAGE CONTENT WRAPPER -->
+                </div>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js">
+        </script>
+        <script src="controllers/controller.js">
+        </script>
+        <!-- START THIS PAGE PLUGINS-->
+        <script src="templete/js/plugins/icheck/icheck.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/scrolltotop/scrolltopcontrol.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/morris/raphael-min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/morris/morris.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/rickshaw/d3.v3.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/rickshaw/rickshaw.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/bootstrap/bootstrap-datepicker.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/owl/owl.carousel.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/moment.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript">
+        </script>
+        <!-- END THIS PAGE PLUGINS-->
+        <!-- START TEMPLATE -->
+        <script src="templete/js/settings.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins.js" type="text/javascript">
+        </script>
+        <script src="templete/js/actions.js" type="text/javascript">
+        </script>
+        <script src="templete/js/demo_dashboard.js" type="text/javascript">
+        </script>
+        <!-- END TEMPLATE -->
+        <!-- THIS PAGE PLUGINS -->
+        <script src="templete/js/plugins/icheck/icheck.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/datatables/jquery.dataTables.min.js" type="text/javascript">
+        </script>
+        <!-- END PAGE PLUGINS -->
+        <!-- THIS PAGE PLUGINS -->
+        <script src="templete/js/plugins/icheck/icheck.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/bootstrap/bootstrap-datepicker.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/bootstrap/bootstrap-select.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/validationengine/languages/jquery.validationEngine-en.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/validationengine/jquery.validationEngine.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/jquery-validation/jquery.validate.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins/maskedinput/jquery.maskedinput.min.js" type="text/javascript">
+        </script>
+        <!-- END THIS PAGE PLUGINS -->
+        <!-- START TEMPLATE -->
+        <script src="templete/js/settings.js" type="text/javascript">
+        </script>
+        <script src="templete/js/plugins.js" type="text/javascript">
+        </script>
+        <script src="templete/js/actions.js" type="text/javascript">
+        </script>
+        <!-- END TEMPLATE -->
+        <script type="text/javascript">
+            var jvalidate = $("#jvalidate").validate({
+                ignore: [],
+                rules: {                                            
+                        login: {
+                                required: true,
+                                minlength: 2,
+                                maxlength: 8
+                        },
+                        password: {
+                                required: true,
+                                minlength: 5,
+                                maxlength: 10
+                        },
+                        're-password': {
+                                required: true,
+                                minlength: 5,
+                                maxlength: 10,
+                                equalTo: "#password2"
+                        },
+                        age: {
+                                required: true,
+                                min: 18,
+                                max: 100
+                        },
+                        email: {
+                                required: true,
+                                email: true
+                        },
+                        date: {
+                                required: true,
+                                date: true
+                        },
+                        credit: {
+                                required: true,
+                                creditcard: true
+                        },
+                        site: {
+                                required: true,
+                                url: true
+                        }
+                    }                                        
+                });
+        </script>
+    </body>
+</html>
